@@ -83,7 +83,7 @@ class _CarePageState extends State<CarePage> {
               ),
             ),
             GestureDetector(
-              onTap: () => _onItemTapped(4),
+              onTap: () => _onItemTapped(2),
               child: buildNavItem(
                 2,
                 'Care',
@@ -103,7 +103,7 @@ class _CarePageState extends State<CarePage> {
             ),
 
             GestureDetector(
-              onTap: () => _onItemTapped(2),
+              onTap: () => _onItemTapped(4),
               child: buildNavItem(
                 4,
                 'Community',

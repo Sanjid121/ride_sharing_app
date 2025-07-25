@@ -62,9 +62,9 @@ desing(String txt, String img) {
   );
 }
 
-prodact_name() {
+prodact_name(String txt) {
   return Text(
-    'Racing Dual Visor Helmet',
+    txt,
     style: GoogleFonts.inter(
       fontWeight: FontWeight.w500,
       fontSize: 14,
@@ -100,12 +100,12 @@ star() {
   );
 }
 
-pric_txt() {
+pric_txt(String txt) {
   return Row(
     spacing: 7,
     children: [
       Text(
-        '₹ 4,079',
+        txt,
         style: GoogleFonts.inter(
           fontWeight: FontWeight.w600,
           fontSize: 16,
@@ -309,24 +309,27 @@ appbar(context, String text) {
   );
 }
 
-pars_card() {
+pars_card(context,text,img) {
+    final hiat = MediaQuery.of(context).size.height;
+  final waid = MediaQuery.of(context).size.width;
   return Column(
     children: [
       Container(
-        width: 110,
+        width: waid*0.2796,
         height: 91,
         decoration: ShapeDecoration(
           image: DecorationImage(
-            image: AssetImage("image/ClutchShoe.png"),
+            image: AssetImage(img),
             fit: BoxFit.fill,
           ),
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
         ),
       ),
       Text(
-        'Spark Plug',
-        style: GoogleFonts.inter(fontSize: 14, fontWeight: FontWeight.w500),
+      text,
+        style: GoogleFonts.inter(fontSize: 14, fontWeight: FontWeight.w500,color: Color(0xfff666666)),
       ),
+     
     ],
   );
 }
